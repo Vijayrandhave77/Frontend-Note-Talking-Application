@@ -22,7 +22,7 @@ function Signin() {
     {
       email:email.current.value,
       otp:otp.current.value
-    }.config).then((response)=>{
+    },config).then((response)=>{
     console.log(response.data)
   }).catch((err)=>{
     console.log(err)
