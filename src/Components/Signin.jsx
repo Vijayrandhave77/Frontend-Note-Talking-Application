@@ -7,15 +7,22 @@ function Signin() {
   let email = useRef()
   let otp = useRef()
 
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    withCredentials: true, // Important for sending cookies
+  };
+
  const handleSignin = (e)=>{
   e.preventDefault();
 
+  
   axios.post('https://backend-notetalking-application.onrender.com/api/login',
     {
       email:email.current.value,
       otp:otp.current.value
-    }
-  ).then((response)=>{
+    }.config).then((response)=>{
     console.log(response.data)
   }).catch((err)=>{
     console.log(err)
