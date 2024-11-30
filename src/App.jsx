@@ -13,7 +13,7 @@ function App() {
   useEffect(()=>{
     let tok = Cookies.get('NewjwtToken')
     setToken(tok)
-  },[])
+  })
 
   let router = createBrowserRouter(
     createRoutesFromChildren(
