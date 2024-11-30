@@ -11,7 +11,7 @@ function App() {
  
   const [token,setToken] = useState()
   useEffect(()=>{
-    let tok = Cookies.get('jwtToken')
+    let tok = Cookies.get('NewjwtToken')
     setToken(tok)
   },[])
 

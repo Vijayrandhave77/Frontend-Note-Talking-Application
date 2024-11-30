@@ -29,9 +29,9 @@ function Signin() {
   })
 
   setTimeout(()=>{
-    window.location.reload()
+    // window.location.reload()
+    navigate("/dashboard")
   },1000)
-  navigate("/dashboard")
  }
   return (
     <div className="signup-page">
